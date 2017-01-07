@@ -96,6 +96,7 @@ public class Pantalla extends JFrame implements ActionListener {
 				if (e.getSource() == btnModif) { //SE PULSA EL BOTON MOFIFICACION
 					ModificaDep(dep,nombre.getText(),loe.getText()); }
 				else { //SE PULSA LIMPIAR LimpiarCampos();
+					LimpiarCampos();
 				}
 	}
 	catch(java.lang.NumberFormatException ex){

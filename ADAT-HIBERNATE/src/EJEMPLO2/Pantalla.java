@@ -112,10 +112,7 @@ public class Pantalla extends JFrame implements ActionListener {
 		SessionFactory sesion= SessionFactoryBuilder.getSessionfactory();
 		Session session = sesion.openSession();
 		Transaction tx =session.beginTransaction();
-		
-	
-		
-		
+
 		if (existeDepartamento(session, num)) 
 			etiqueta.setText(" DEPARTAMENTO EXISTENTE - NO SE PUEDE DAR DE ALTA"); 
 		else {

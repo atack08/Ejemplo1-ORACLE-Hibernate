@@ -1,5 +1,7 @@
 package PRIMERO;
 
+import javax.swing.JOptionPane;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -11,9 +13,11 @@ public class SessionFactoryBuilder {
 		
 		try{
 			SessionFactory = new Configuration().configure().buildSessionFactory();
+			
+			JOptionPane.showMessageDialog(null, "SESIÓN HIBERNATE CREADA SATISFACTORIAMENTE");
 		}
 		catch (Throwable e) {
-			System.err.println("Fallo en la creación inicial de la Session Factory");
+			JOptionPane.showMessageDialog(null, "Fallo en la creación inicial de la Session Factory","ERROR", JOptionPane.ERROR_MESSAGE);
 		}
 		
 		
